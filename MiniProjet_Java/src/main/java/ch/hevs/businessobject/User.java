@@ -1,10 +1,13 @@
 package ch.hevs.businessobject;
 
+import java.util.Set;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToMany;
 import javax.persistence.Table;
 
 @Entity
@@ -24,6 +27,20 @@ public class User {
 	private String username;
 	@Column(name="password")
 	private String password;
+	
+	//Relations
+	@ManyToMany
+	private Set<Device> devices;
+	
+	public Set<Device> getDevices(){
+		return devices;
+	}
+	
+	public void setDevices(Set<Device> devices){
+		this.devices = devices;
+	}
+	
+	
 	public Long getId() {
 		return id;
 	}

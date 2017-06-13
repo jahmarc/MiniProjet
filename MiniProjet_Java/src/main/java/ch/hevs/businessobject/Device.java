@@ -10,8 +10,8 @@ import javax.persistence.Id;
 import javax.persistence.Inheritance;
 import javax.persistence.InheritanceType;
 import javax.persistence.JoinColumn;
-import javax.persistence.OneToMany;
-import javax.persistence.OneToOne;
+import javax.persistence.ManyToMany;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Entity
@@ -36,11 +36,19 @@ public class Device {
 	private String ip;
 	
 	//Relations
-	@OneToOne
-	@JoinColumn(name= "network_fk", nullable = false)
+	@ManyToOne
 	private Network network;
-	@OneToMany
+	
+	@ManyToMany(mappedBy="devices")
 	private Set<User> users;
+	
+	public Set<User> getUsers(){
+		return users;
+	}
+	
+	public void setUsers(Set<User> users){
+		this.users = users;
+	}
 	
 	public Long getId() {
 		return id;
