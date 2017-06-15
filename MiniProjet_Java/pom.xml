@@ -2,7 +2,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>MiniProjet_Java</groupId>
   <artifactId>MiniProjet_Java</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
+  <version>0.0.2-SNAPSHOT</version>
   
 <packaging>war</packaging>
   <dependencies>

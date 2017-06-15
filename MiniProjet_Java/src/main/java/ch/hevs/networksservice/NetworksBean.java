@@ -15,7 +15,7 @@ import ch.hevs.businessobject.User;
 
 public class NetworksBean implements Networks {
 
-	@PersistenceContext(name = "NetworksPU", type=PersistenceContextType.EXTENDED)
+	@PersistenceContext(name = "networkPU", type=PersistenceContextType.EXTENDED)
 	private EntityManager em;
 	
 	@Override

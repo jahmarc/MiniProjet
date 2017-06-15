@@ -38,9 +38,9 @@ public class MappingBean {
 	
 	@PostConstruct
 	public void initialize() throws NamingException {
-		// use JNDI to inject reference to bank EJB
+		// use JNDI to inject reference to networks EJB
     	InitialContext ctx = new InitialContext();
-		net = (Networks) ctx.lookup("java:global/MiniProjet_Java/NetworksBean!ch.hevs.networksservice.Networks");
+		net = (Networks) ctx.lookup("java:global/MiniProjet_Java-0.0.2-SNAPSHOT/NetworksBean!ch.hevs.networksservice.Networks");
 	
 		List<Network> networksList = net.getNetworks();
 		this.networkNames = new ArrayList<String>();
