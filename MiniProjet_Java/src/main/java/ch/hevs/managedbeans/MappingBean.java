@@ -57,15 +57,17 @@ public class MappingBean {
 		for (User user : usersList) {
 			this.userNames.add(user.getFirstname() + " " + user.getLastname());
 		}
+		
+		
+		//init
+		network = net.getNetworkByDevice(devices.get(0).getId());
+		networks_user=net.getNetworksByUserList(users.get(0).getId());
+		users_device=net.getUsersByDeviceList(devices.get(0).getId());
+		users_network=net.getUsersByNetworkList(networks.get(0).getId());
+		devices_user=net.getDevicesByUserList(users.get(0).getId());
+		devices_network=net.getDevicesByNetworkList(networks.get(0).getId());
 	}
 
-	public Networks getNet() {
-		return net;
-	}
-
-	public void setNet(Networks net) {
-		this.net = net;
-	}
 
 	public List<Network> getNetworks() {
 		return networks;
@@ -162,6 +164,8 @@ public class MappingBean {
 	public void setDevices_network(List<Device> devices_network) {
 		this.devices_network = devices_network;
 	}
+	
+	
 	
 	
 	
