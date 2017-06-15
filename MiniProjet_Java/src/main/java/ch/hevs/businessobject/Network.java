@@ -91,4 +91,10 @@ public class Network {
 			this.type = type;
 		}
 
+		@Override
+		public String toString() {
+			String result = id + "-" + name + "-" + network + "-" + mask + "-" + externalip + "-" + type;
+			return result;
+		}
+		
 }

@@ -123,4 +123,11 @@ public class Device {
 		this.ip = ip;
 	}
 
+	
+	@Override
+	public String toString() {
+		String result = id + "-" + type + "-" + place + "-" + name + "-" + brand + "-" + sn + "-" + ip ;
+		return result;
+	}
+
 }

@@ -21,6 +21,9 @@ public class MappingBean {
 	private List<Device> devices;
 	private List<User> users;
 	
+	private long idUser;
+	private long idNetwork;
+	private long idDevice;
 	
 	private List<String> networkNames;
 	private List<String> deviceNames;
@@ -200,15 +203,18 @@ public class MappingBean {
 	
 	public void updateNetworkName(ValueChangeEvent event) {
     	this.NetworkName = (String)event.getNewValue();
+    	this.idNetwork = networks.get(0).getId();
     	
     }
 	
 	public void updateDeviceName(ValueChangeEvent event) {
     	this.DeviceName = (String)event.getNewValue();
+    	this.idDevice = devices.get(0).getId();
     }
 	
 	public void updateUserName(ValueChangeEvent event) {
     	this.UserName = (String)event.getNewValue();
+    	this.idUser = users.get(0).getId();
     }
 	
 	
