@@ -15,11 +15,16 @@ public interface Networks {
 
 	//Ramener chaque objet
 	Computer getComputer (long id);
+	Device getDevice(long id);
 	Network getNetwork(long id);
 	Printer getPrinter(long id);
 	User getUser(long id);
 	
 	//Ramener des listes d'objets
+	public List<Device> getDevices();
+	public List<Network> getNetworks();
+	public List<User> getUsers();
+	
 	public List<Device> getDevicesByUserList(long id);
 	public List<Device> getDevicesByNetworkList(long id);
 	public List<Network> getNetworksByUserList(long id);

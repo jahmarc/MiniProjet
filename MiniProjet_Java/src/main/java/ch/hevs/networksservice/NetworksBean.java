@@ -28,6 +28,16 @@ public class NetworksBean implements Networks {
 		System.out.println("ID Computer called from getComputer(): "+computer.getId());
 		return computer;
 	}
+	
+	@Override
+	public Device getDevice(long id) {
+		Query query = em.createQuery("FROM Device c WHERE c.id=:id");
+		query.setParameter("id", id);
+		
+		Device device = (Device) query.getSingleResult();
+		System.out.println("ID Computer called from getComputer(): "+device.getId());
+		return device;
+	}
 
 	@Override
 	public Network getNetwork(long id) {
@@ -89,6 +99,21 @@ public class NetworksBean implements Networks {
 	@Override
 	public List<User> getUsersByNetworkList(long id) {
 		return (List<User>) em.createQuery("SELECT n.users FROM Network n where n.id=:id").setParameter("id", id).getResultList();
+	}
+
+	@Override
+	public List<Device> getDevices() {
+		return em.createQuery("FROM Device").getResultList();
+	}
+
+	@Override
+	public List<Network> getNetworks() {
+		return em.createQuery("FROM Network").getResultList();
+	}
+
+	@Override
+	public List<User> getUsers() {
+		return em.createQuery("FROM User").getResultList();
 	}
 
 }

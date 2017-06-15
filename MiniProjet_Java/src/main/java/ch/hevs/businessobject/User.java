@@ -1,5 +1,6 @@
 package ch.hevs.businessobject;
 
+import java.util.List;
 import java.util.Set;
 
 import javax.persistence.Column;
@@ -30,13 +31,13 @@ public class User {
 	
 	//Relations
 	@ManyToMany
-	private Set<Device> devices;
+	private List<Device> devices;
 	
-	public Set<Device> getDevices(){
+	public List<Device> getDevices(){
 		return devices;
 	}
 	
-	public void setDevices(Set<Device> devices){
+	public void setDevices(List<Device> devices){
 		this.devices = devices;
 	}
 	

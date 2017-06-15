@@ -1,6 +1,6 @@
 package ch.hevs.businessobject;
 
-import java.util.Set;
+import java.util.List;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -31,7 +31,15 @@ public class Network {
 	
 	//Relations
 	@OneToMany(mappedBy="network")
-	private Set<Device> devices;
+	private List<Device> devices;
+	
+	public List<Device> getDevices(){
+		return devices;
+	}
+	
+	public void setDevices(List<Device> devices){
+		this.devices = devices;
+	}
 	
 	
 	public Long getId() {

@@ -1,5 +1,6 @@
 package ch.hevs.businessobject;
 
+import java.util.List;
 import java.util.Set;
 
 import javax.persistence.Column;
@@ -40,13 +41,13 @@ public class Device {
 	private Network network;
 	
 	@ManyToMany(mappedBy="devices")
-	private Set<User> users;
+	private List<User> users;
 	
-	public Set<User> getUsers(){
+	public List<User> getUsers(){
 		return users;
 	}
 	
-	public void setUsers(Set<User> users){
+	public void setUsers(List<User> users){
 		this.users = users;
 	}
 	
