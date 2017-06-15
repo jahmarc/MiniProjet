@@ -10,21 +10,23 @@
     <ui:define name="content">
         <br></br>
         <h:form>
-        	<div style="color: red; font-size: 30 ;"><h:outputLabel value="Network"></h:outputLabel></div>
+        	<div style="color: red; font-size: 30 ;"><h:outputLabel value="User"></h:outputLabel></div>
         	<br></br>
         	
         		<h:outputText value="Name "></h:outputText>
-        		<h:outputText value="#{MappingBean.networkName}"></h:outputText>
+        		<h:outputText value="#{MappingBean.UserName}"></h:outputText>
+        		
         		
      		<br></br>
-     		<div style="color: red; font-size: 30 ;"><h:outputLabel value="User in the network"></h:outputLabel></div>
-				<br></br>
+     		<div style="color: red; font-size: 30 ;"><h:outputLabel value="Networks"></h:outputLabel></div>
+     		<br></br>
      		
-     		<c:forEach var="user" items="${MappingBean.users_network}"> 
+     		<c:forEach var="network" items="${MappingBean.networks_user}"> 
      			
-     		<h:outputText value="#user.toString()"></h:outputText>
+     		<h:outputText value="#network.toString()"></h:outputText>
      		</c:forEach>
      		
+
         </h:form>
     </ui:define>
 </ui:composition>

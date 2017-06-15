@@ -8,12 +8,14 @@
 
 <ui:composition template="/WEB-INF/templates/BasicTemplate.xhtml">
 	<ui:define name="content">
+	<div style="color: red; font-size: 30 ;"><h:outputLabel value="Choose your user"></h:outputLabel></div>
+        	<br></br>
     	<h:form>
 			<h:selectOneMenu value="#{MappingBean.UserName}" valueChangeListener="#{MappingBean.updateUserName}" onchange="submit()">
 	        		<f:selectItems value="#{MappingBean.userNames}"/>
 	       	</h:selectOneMenu>
-	       	
-	       	<h:commandButton value="Choose it" action="transferForm"></h:commandButton>
+	       		       	
+	       	<h:commandButton value="Choose it" action="SelectedUser"></h:commandButton>
 		</h:form>
 	</ui:define>
 </ui:composition>

@@ -10,11 +10,11 @@
     <ui:define name="content">
         <br></br>
         <h:form>
-        	<div style="color: red; font-size: 30 ;"><h:outputLabel value="Network"></h:outputLabel></div>
+        	<div style="color: red; font-size: 30 ;"><h:outputLabel value="Device"></h:outputLabel></div>
         	<br></br>
         	
         		<h:outputText value="Name "></h:outputText>
-        		<h:outputText value="#{MappingBean.networkName}"></h:outputText>
+        		<h:outputText value="#{MappingBean.deviceName}"></h:outputText>
         		
      		<br></br>
      		<div style="color: red; font-size: 30 ;"><h:outputLabel value="User in the network"></h:outputLabel></div>
@@ -24,8 +24,6 @@
      			
      		<h:outputText value="#user.toString()"></h:outputText>
      		</c:forEach>
-     		
-        </h:form>
     </ui:define>
 </ui:composition>
 </html>
