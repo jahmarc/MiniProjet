@@ -8,11 +8,13 @@
 
 <ui:composition template="/WEB-INF/templates/BasicTemplate.xhtml">
 	<ui:define name="content">
-    
-		<h:selectOneMenu>
-	        		<f:selectItems
-			value="#{NetworksBean.getNetwork}" />
-		</h:selectOneMenu>
+    	<h:form>
+			<h:selectOneMenu value="#{MappingBean.NetworkName}" valueChangeListener="#{MappingBean.updateNetworkName}" onchange="submit()">
+	        		<f:selectItems value="#{MappingBean.networkNames}"/>
+	       	</h:selectOneMenu>
+	       	
+	       	<h:commandButton value="Choose it" action="transferForm"></h:commandButton>
+		</h:form>
 	</ui:define>
 </ui:composition>
 

@@ -1,0 +1,10 @@
+ch\hevs\businessobject\Computer.class
+ch\hevs\businessobject\Network.class
+ch\hevs\networksservice\Networks.class
+ch\hevs\exception\BankException.class
+ch\hevs\exception\NetworkException.class
+ch\hevs\networksservice\NetworksBean.class
+ch\hevs\businessobject\Device.class
+ch\hevs\businessobject\Printer.class
+ch\hevs\businessobject\User.class
+ch\hevs\managedbeans\MappingBean.class

@@ -4,15 +4,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 import javax.annotation.PostConstruct;
+import javax.faces.event.ValueChangeEvent;
 import javax.naming.InitialContext;
 import javax.naming.NamingException;
 
-import ch.hevs.businessobject.Account;
-import ch.hevs.businessobject.Client;
 import ch.hevs.businessobject.Device;
 import ch.hevs.businessobject.Network;
 import ch.hevs.businessobject.User;
-import ch.hevs.networksservice.Bank;
 import ch.hevs.networksservice.Networks;
 
 public class MappingBean {
@@ -33,6 +31,10 @@ public class MappingBean {
 	private List<User> users_network;
 	private List<Device> devices_user;
 	private List<Device> devices_network;
+	
+	private String NetworkName;
+	private String UserName;
+	private String DeviceName;
 	
 	@PostConstruct
 	public void initialize() throws NamingException {
@@ -164,9 +166,48 @@ public class MappingBean {
 	public void setDevices_network(List<Device> devices_network) {
 		this.devices_network = devices_network;
 	}
+
+
+	public String getNetworkName() {
+		return NetworkName;
+	}
+
+
+	public void setNetworkName(String networkName) {
+		NetworkName = networkName;
+	}
+
+
+	public String getUserName() {
+		return UserName;
+	}
+
+
+	public void setUserName(String userName) {
+		UserName = userName;
+	}
+
+
+	public String getDeviceName() {
+		return DeviceName;
+	}
+
+
+	public void setDeviceName(String deviceName) {
+		DeviceName = deviceName;
+	}
 	
+	public void updateNetworkName(ValueChangeEvent event) {
+    	this.NetworkName = (String)event.getNewValue();
+    }
 	
+	public void updateDeviceName(ValueChangeEvent event) {
+    	this.DeviceName = (String)event.getNewValue();
+    }
 	
+	public void updateUserName(ValueChangeEvent event) {
+    	this.UserName = (String)event.getNewValue();
+    }
 	
 	
 }

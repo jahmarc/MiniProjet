@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <pageflow:Pageflow xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pageflow="http://www.sybase.com/suade/pageflow" id="pf14141592409490" configfile="/MiniProjet_Java/src/main/webapp/WEB-INF/faces-config.xml">
-  <nodes xsi:type="pageflow:PFPage" name="Welcome.xhtml" x="122" y="178" id="pf14973758492490" referenceLink="//@navigationRule.0/@fromViewId|" outlinks="pf14973758492491" path="/ Welcome.xhtml"/>
-  <nodes xsi:type="pageflow:PFPage" name="transferForm.xhtml" x="338" y="178" id="pf14973758492492" referenceLink="//@navigationRule.1/@fromViewId|" outlinks="pf14973758492493" inlinks="pf14973758492491" path="/transferForm.xhtml"/>
-  <nodes xsi:type="pageflow:PFPage" name="showTransferResult.xhtml" x="554" y="178" id="pf14973758492494" referenceLink="//@navigationRule.1/@navigationCase.0/@toViewId|" inlinks="pf14973758492493" path="/showTransferResult.xhtml"/>
-  <links id="pf14973758492491" target="pf14973758492492" source="pf14973758492490" outcome="transferForm"/>
-  <links id="pf14973758492493" target="pf14973758492494" source="pf14973758492492" outcome="#{transferBean.performTransfer}"/>
+  <nodes xsi:type="pageflow:PFPage" name="User.xhtml" id="pf14975333497132" referenceLink="//@navigationRule.0/@fromViewId|" outlinks="pf14975333497133" path="/ User.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="Networks.xhtml" id="pf14975333497134" referenceLink="//@navigationRule.1/@fromViewId|" inlinks="pf14975333497133" path="/Networks.xhtml"/>
+  <links id="pf14975333497133" target="pf14975333497134" source="pf14975333497132" outcome="Networks"/>
 </pageflow:Pageflow>

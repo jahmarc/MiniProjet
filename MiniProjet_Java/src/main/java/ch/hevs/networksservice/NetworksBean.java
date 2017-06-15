@@ -7,7 +7,6 @@ import javax.persistence.PersistenceContext;
 import javax.persistence.PersistenceContextType;
 import javax.persistence.Query;
 
-import ch.hevs.businessobject.Account;
 import ch.hevs.businessobject.Computer;
 import ch.hevs.businessobject.Device;
 import ch.hevs.businessobject.Network;
