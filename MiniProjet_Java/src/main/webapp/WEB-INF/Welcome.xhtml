@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:ui="http://java.sun.com/jsf/facelets"
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:f="http://java.sun.com/jsf/core">
+
+<ui:composition template="/WEB-INF/templates/BasicTemplate.xhtml">
+    <ui:define name="content">
+        <br></br>
+        <h:form>
+        	<div style="color: red; font-size: 30 ;"><h:outputLabel value="You have an account? Connect!"></h:outputLabel></div>
+        	<br></br>
+        	<h:panelGrid columns="2" style="width: 50px; height: 100x; ">
+        		<h:outputText value="UserName "></h:outputText>
+        		<h:inputText value=" "></h:inputText>
+        		<h:outputText value="Password "></h:outputText>
+        		<h:inputText value=" "></h:inputText>
+     		<h:commandButton value="Connect" action="#{NetworksBean.}"></h:commandButton>
+     		</h:panelGrid>
+     		 <h:commandLink action="Register">
+         		<h:outputText value="Register" />
+        	</h:commandLink>
+        </h:form>
+    </ui:define>
+</ui:composition>
+</html>

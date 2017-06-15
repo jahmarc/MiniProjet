@@ -1,0 +1,26 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core">
+
+<ui:composition template="/WEB-INF/templates/BasicTemplate.xhtml">
+	<ui:define name="content">
+    <h:panelGrid columns="1" style="width: 50px; height: 100x; ">
+    <h:commandLink action="Device">
+    <h:commandButton value="See all devices" action="Device" style="width: 162px; "></h:commandButton>
+    </h:commandLink>
+    <h:commandLink action="Networks">
+    <h:commandButton value="See all networks" action="Networks" style="width: 162px; "></h:commandButton>
+    </h:commandLink>
+    <h:commandButton value="Your informations" action="UserInfo" style="width: 162px; "></h:commandButton>
+    <h:commandButton value="Installed Devices" action="UserDevices" style="width: 162px; "></h:commandButton>
+    <h:commandButton value="Installed Networks" action="UserNetworks" style="width: 162px; "></h:commandButton>
+    </h:panelGrid>
+		
+	</ui:define>
+</ui:composition>
+
+</html>

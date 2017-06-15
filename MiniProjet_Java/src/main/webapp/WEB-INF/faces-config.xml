@@ -10,8 +10,8 @@
 		<managed-bean-scope>session</managed-bean-scope>
 	</managed-bean>
 	<navigation-rule>
-		<display-name>welcomeBank.xhtml</display-name>
-		<from-view-id>/welcomeBank.xhtml</from-view-id>
+		<display-name>Welcome.xhtml</display-name>
+		<from-view-id>/ Welcome.xhtml</from-view-id>
 		<navigation-case>
 			<from-outcome>transferForm</from-outcome>
 			<to-view-id>/transferForm.xhtml</to-view-id>

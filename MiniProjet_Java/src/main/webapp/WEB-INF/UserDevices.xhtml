@@ -1,0 +1,21 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:ui="http://java.sun.com/jsf/facelets"
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:f="http://java.sun.com/jsf/core">
+
+<ui:composition template="/WEB-INF/templates/BasicTemplate.xhtml">
+    <ui:define name="content">
+        <br></br>
+        <h:form>
+        	<div style="color: red; font-size: 30 ;"><h:outputLabel value="All your installed devices"></h:outputLabel></div>
+        	<br></br>
+        <h:commandLink action="transferForm">
+         <h:outputText value="Device X" />
+        </h:commandLink>
+        </h:form>
+    </ui:define>
+</ui:composition>
+</html>
