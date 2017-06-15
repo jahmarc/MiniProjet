@@ -21,6 +21,7 @@ public class MappingBean {
 	private List<Device> devices;
 	private List<User> users;
 	
+	
 	private List<String> networkNames;
 	private List<String> deviceNames;
 	private List<String> userNames;
@@ -199,6 +200,7 @@ public class MappingBean {
 	
 	public void updateNetworkName(ValueChangeEvent event) {
     	this.NetworkName = (String)event.getNewValue();
+    	
     }
 	
 	public void updateDeviceName(ValueChangeEvent event) {
