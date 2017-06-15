@@ -26,6 +26,15 @@
      		<h:outputText value="#network.toString()"></h:outputText>
      		</c:forEach>
      		
+     		<br></br>
+     		<div style="color: red; font-size: 30 ;"><h:outputLabel value="Device"></h:outputLabel></div>
+     		<br></br>
+     		
+     		<c:forEach var="device" items="${MappingBean.devices_user}"> 
+     			
+     		<h:outputText value="#device.toString()"></h:outputText>
+     		</c:forEach>
+     		
 
         </h:form>
     </ui:define>

@@ -17,13 +17,20 @@
         		<h:outputText value="#{MappingBean.deviceName}"></h:outputText>
         		
      		<br></br>
-     		<div style="color: red; font-size: 30 ;"><h:outputLabel value="User in the network"></h:outputLabel></div>
+     		<div style="color: red; font-size: 30 ;"><h:outputLabel value="User"></h:outputLabel></div>
 				<br></br>
      		
-     		<c:forEach var="user" items="${MappingBean.users_network}"> 
+     		<c:forEach var="user" items="${MappingBean.users_device}"> 
      			
      		<h:outputText value="#user.toString()"></h:outputText>
      		</c:forEach>
+     		
+     		<br></br>
+     		<div style="color: red; font-size: 30 ;"><h:outputLabel value="Network"></h:outputLabel></div>
+				<br></br>
+				
+     		<h:outputText value="#{MappingBean.network}"></h:outputText>
+     		
     </ui:define>
 </ui:composition>
 </html>
