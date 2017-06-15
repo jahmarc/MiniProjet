@@ -17,10 +17,19 @@
         		<h:outputText value="#{MappingBean.networkName}"></h:outputText>
         		
      		<br></br>
-     		<div style="color: red; font-size: 30 ;"><h:outputLabel value="User in the network"></h:outputLabel></div>
+     		<div style="color: red; font-size: 30 ;"><h:outputLabel value="Users in the network"></h:outputLabel></div>
 				<br></br>
      		
      		<c:forEach var="user" items="${MappingBean.users_network}"> 
+     			
+     		<h:outputText value="#user.toString()"></h:outputText>
+     		</c:forEach>
+     		
+     		<br></br>
+     		<div style="color: red; font-size: 30 ;"><h:outputLabel value="Devices in the network"></h:outputLabel></div>
+				<br></br>
+     		
+     		<c:forEach var="device" items="${MappingBean.devices_network}"> 
      			
      		<h:outputText value="#user.toString()"></h:outputText>
      		</c:forEach>
